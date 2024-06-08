@@ -1,3 +1,9 @@
 
 <app-sidenav></app-sidenav>
-<router-outlet></router-outlet>
+<app-topbar (openedMenu)="menu = $event"></app-topbar>
+<app-sidemenu [menuActive]="menu"></app-sidemenu>
+<div class="app">
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

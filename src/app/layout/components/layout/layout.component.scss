@@ -1,0 +1,17 @@
+.app{
+  margin-top: 107px;
+  margin-right: 396px;
+  margin-left: 94px;
+  height: calc(100vh - 107px);
+  overflow: auto;
+  transition: margin-right .3s;
+}
+
+@media (max-width: 991.98px) {
+  .app{
+    margin-right: 0;
+    &.active{
+      transition: margin-right .3s;
+    }
+  }
+}

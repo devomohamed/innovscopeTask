@@ -1,0 +1,120 @@
+<div class="side-menu" [ngClass]="{'active':menuActive}">
+  <div class="container">
+    <div class="schedual">
+      <div class="head flex justify-content-between align-items-centet">
+        <h3>Today’s Scheudle</h3>
+        <div class="button-icons">
+          <!-- <div class="select-button">
+            <button *ngFor="let btn of buttons"  pButton pRipple class="p-button-primary" [ngClass]="{'active':btn.active}" [innerHtml]="btn.html">
+            </button>
+          </div> -->
+          <p-selectButton [options]="justifyOptions" [(ngModel)]="value" optionLabel="icon">
+            <ng-template let-item pTemplate>
+              <i [class]="item.icon"></i>
+            </ng-template>
+          </p-selectButton>
+        </div>
+      </div>
+      <div class="invitation-calls mt-30 flex justify-content-between align-items-center">
+        <div class="left">
+          <h5 class="text-blue-500">30 minute call with Client</h5>
+          <h4>Project Discovery Call</h4>
+        </div>
+        <div class="right text-blue-500">
+          + Invite
+        </div>
+      </div>
+    </div>
+    <div class="calls mt-30 flex justify-content-between align-items-center">
+      <p-avatarGroup styleClass="mb-3">
+        <p-avatar image="../../../../assets/person/8b3db385d03bb5f4e0ac9df71e41ad72.jpeg" size="large" shape="circle" />
+        <p-avatar image="../../../../assets/person/85ca5046846d232d32a3312c1763c858.jpeg" size="large" shape="circle" />
+        <p-avatar image="../../../../assets/person/978f15790ba4cf9e39e16df5650981b3.jpeg" size="large" shape="circle" />
+        <p-avatar label="R" size="large" shape="circle" />
+      </p-avatarGroup>
+      <div class="timer">
+        28:35
+      </div>
+      <div class="icons flex align-items-center">
+        <i class="pi pi-phone"></i>
+        <div class="menu">
+
+          <!-- <p-toast></p-toast> -->
+          <p-menu #menu [model]="items" [popup]="true"></p-menu>
+          <button pButton type="button" (click)="menu.toggle($event)" icon="pi pi-ellipsis-v"></button>
+        </div>
+      </div>
+    </div>
+    <div class="messages mt-30">
+      <div class="header">
+        <h3>Messages</h3>
+      </div>
+      <div class="content">
+        <div class="message flex align-items-center">
+          <p-avatar image="../../../../assets/person/8b3db385d03bb5f4e0ac9df71e41ad72.jpeg" styleClass="mr-2 mt-3"
+            size="large" shape="circle"></p-avatar>
+          <div class="details ml-2">
+            <h4>Yassin Mustafa</h4>
+            <p class="muted-text">Hi Angelina! How are You?</p>
+          </div>
+        </div>
+        <div class="message flex align-items-center">
+          <p-avatar image="../../../../assets/person/85ca5046846d232d32a3312c1763c858.jpeg" styleClass="mr-2 mt-3"
+            size="large" shape="circle"></p-avatar>
+          <div class="details ml-2">
+            <h4>Mohamed Mustafa</h4>
+            <p class="muted-text">Do you need that design?</p>
+          </div>
+        </div>
+        <div class="message flex align-items-center">
+          <p-avatar image="../../../../assets/person/978f15790ba4cf9e39e16df5650981b3.jpeg" styleClass="mr-2 mt-3"
+            size="large" shape="circle"></p-avatar>
+          <div class="details ml-2">
+            <h4>Omar Mustafa</h4>
+            <p class="muted-text">What is the price of hourly...</p>
+          </div>
+        </div>
+        <div class="message flex align-items-center">
+          <p-avatar image="../../../../assets/person/53ece4752b8eb610fb19de0636019a84.jpeg" styleClass="mr-2 mt-3"
+            size="large" shape="circle"></p-avatar>
+          <div class="details ml-2">
+            <h4>Ahmed Mustafa</h4>
+            <p class="muted-text">Awsome design!!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="create-task mt-30">
+      <h3>New Task</h3>
+      <div class="flex flex-column gap-2 mt-19">
+        <label for="task">Task Title</label>
+        <input pInputText id="task" aria-describedby="task-help" placeholder="Create New" [(ngModel)]="value" />
+      </div>
+      <div class="slider mt-16">
+        <div class="card">
+          <p-carousel [value]="imogies" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions" [showIndicators]="false">
+            <ng-template let-imo pTemplate="item">
+              <div class="product-item">
+                <div class="product-item-content">
+                  {{imo.imogie}}
+                </div>
+              </div>
+            </ng-template>
+          </p-carousel>
+        </div>
+      </div>
+      <p-divider type="solid"></p-divider>
+      <div class="add-collaborators">
+        <h4>Add Collaborators</h4>
+        <div class="collaborators mt-10 mb-5  ">
+          <div class="card flex align-items-center gap-2 flex-wrap">
+            <p-chip label="Yassine" image="../../../../assets/person/53ece4752b8eb610fb19de0636019a84.jpeg" [removable]="true"></p-chip>
+            <p-chip label="Noah" image="../../../../assets/person/Noah.jpeg" [removable]="true"></p-chip>
+            <p-button icon="pi pi-plus" rounded="true" severity="secondary"></p-button>
+            <!-- <p-button icon="pi pi-angle-right" rounded="true" severity="secondary"></p-button> -->
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,54 @@
-<p>topbar works!</p>
+<div class="top-bar w-full flex justify-content-between align-items-center">
+  <div class="container w-full flex justify-content-between align-items-center">
+    <div class="fake"></div>
+    <span class="p-input-icon-right search">
+      <i class="pi pi-search"></i>
+      <input type="text" placeholder="Search anything..." pInputText [(ngModel)]="value" />
+    </span>
+    <div class="rightSide flex align-items-center">
+        <label for="check" class="menu">
+            <input type="checkbox" [value]="openedMenu" (click)="changeMenu($event)" id="check"/> 
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+      <i class="pi pi-bell mr-4 p-text-secondary" pBadge style="font-size: 2rem;margin-right: 30px;" value="2"></i>
+      <div class="topbar-profile">
+        <button
+            class="topbar-profile-button p-link flex align-items-center"
+            type="button"
+            pStyleClass="@next"
+            enterClass="hidden"
+            enterActiveClass="scalein"
+            leaveToClass="hidden"
+            leaveActiveClass="fadeout"
+        >
+            <img alt="avatar" [src]="imgToShow" style="margin-right: 12px;" />
+            <i class="pi pi-angle-down"></i>
+        </button>
+        <ul
+            class="list-none p-3 m-0 border-round shadow-2 hidden absolute surface-overlay origin-top w-full sm:w-12rem mt-2 right-0 top-auto"
+        >
+            <li>
+                <a
+                    
+                    pRipple
+                    class="flex p-2 border-round align-items-center hover:surface-hover transition-colors transition-duration-150 cursor-pointer"
+                >
+                    <i class="pi pi-shield mr-3"></i>
+                    <span>Change Password</span>
+                </a>
+                <a
+                    pRipple
+                    
+                    class="flex p-2 border-round align-items-center hover:surface-hover transition-colors transition-duration-150 cursor-pointer"
+                >
+                    <i class="pi pi-power-off mr-3"></i>
+                    <span>Sign Out</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    </div>
+  </div>
+</div>

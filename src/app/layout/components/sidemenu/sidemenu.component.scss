@@ -1,0 +1,78 @@
+.side-menu{
+  padding-top: 76px;
+  height: 100vh;
+  overflow: auto;
+  width: 396px;
+  background-color: #fff;
+  position: fixed;
+  z-index: 1;
+  right: 0; 
+  top: 0;
+  .schedual{
+    padding-top: 31px;
+  }
+  .calls{
+    background-color: #5051F9;
+    padding: .7rem;
+    border-radius: 10px;
+    color: #fff;
+    .icons button{
+      background-color: transparent;
+      border-color: transparent;
+      outline-color: transparent;
+      box-shadow: unset;
+    }
+  }
+}
+
+.p-selectbutton .p-button{
+  i{
+    color: #C8CCD7;
+  }
+  &.p-highlight{
+    background-color: transparent !important;
+    i{
+      color: #768396 !important;
+    }
+  }
+}
+
+
+
+::ng-deep{
+	.p-avatar-group{
+    margin-bottom: 0 !important;
+  }
+  .p-avatar img{
+    object-fit: cover;
+  }
+  .p-inputtext{
+    background-color: #E8EDF1;
+    border-color: #E8EDF1;
+  }
+  .p-carousel-items-content{
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  .p-button.p-button-icon-only{
+    padding: .5rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50px;
+    background-color: #E8EDF1;
+    border-color: #E8EDF1;
+    color: #232360;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .side-menu{
+    transform: translateX(100%);
+    transition: transform .3s;
+    &.active{
+      transform: translateX(0);
+      transition: transform .3s;
+    }
+  }
+}

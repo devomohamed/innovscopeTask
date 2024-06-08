@@ -1,0 +1,146 @@
+<div class="dashboard">
+  <div class="cards gap-2 grid justify-content-between flex-wrap">
+    <div pCard class="card col-12 lg:col-6 xl:col-4 p-4">
+      <div class="top flex justify-content-between align-items-center">
+        <div class="icon"><i class="fa-regular fa-star"></i></div>
+        <p class="muted-text">
+          Task Completed
+        </p>
+        <div class="number font-bold">08</div>
+      </div>
+      <p-divider></p-divider>
+      <div class="bottom flex">
+        <div class="image w-6">
+          <img class="w-full pr-2" src="../../../../../assets/cards/01.png" alt="">
+        </div>
+        <div class="text">
+          <p class="muted-text">
+            <span class="text-green-500 font-bold">+10</span> More
+            <br>
+            from last week
+          </p>
+        </div>
+      </div>
+    </div>
+    <div pCard class="card col-12 lg:col-6 xl:col-4 p-4">
+      <div class="top flex justify-content-between align-items-center">
+        <div class="icon"><i class="fa-regular fa-star"></i></div>
+        <p class="muted-text">
+          New Task
+        </p>
+        <div class="number font-bold">10</div>
+      </div>
+      <p-divider></p-divider>
+      <div class="bottom flex">
+        <div class="image w-6">
+          <img class="w-full pr-2" src="../../../../../assets/cards/02.png" alt="">
+        </div>
+        <div class="text">
+          <p class="muted-text">
+            <span class="text-green-500 font-bold">+10</span> More
+            <br>
+            from last week
+          </p>
+        </div>
+      </div>
+    </div>
+    <div pCard class="card col-12 lg:col-6 xl:col-4 p-4">
+      <div class="top flex justify-content-between align-items-center">
+        <div class="icon"><i class="fa-regular fa-star"></i></div>
+        <p class="muted-text">
+          Project Done
+        </p>
+        <div class="number font-bold">10</div>
+      </div>
+      <p-divider></p-divider>
+      <div class="bottom flex">
+        <div class="image w-6">
+          <img class="w-full pr-2" src="../../../../../assets/cards/03.png" alt="">
+        </div>
+        <div class="text">
+          <p class="muted-text">
+            <span class="text-green-500 font-bold">+10</span> More
+            <br>
+            from last week
+          </p>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="chart bg-white p-3 mt-4">
+    <div class="header py-3 flex justify-content-between">
+      <h3>Task Done</h3>
+      <div class="taps flex">
+        <div class="tap mx-2 font-bold cursor-pointer">Daily</div>
+        <div class="tap mx-2 font-bold cursor-pointer">Weekly</div>
+        <div class="tap mx-2 font-bold cursor-pointer active">Monthly</div>
+      </div>
+    </div>
+    <p-chart type="line" [data]="data" [options]="options"></p-chart>
+  </div>
+  <div class="tasks-section mt-30">
+    <h2>Task</h2>
+    <div class="tasks gap-2 flex flex-column mt-19">
+      <div class="task bg-white p-4 flex flex-wrap justify-content-between">
+        <div class="timer flex align-items-center">
+          <p-button icon="pi pi-play" rounded="true" severity="primary"></p-button>
+          <div class="right ml-3">
+            <h5>Start from</h5>
+            <div class="botom mt-2 muted-text">
+              <i class="pi pi-clock"></i> <span class="ml-2">3.00 am</span>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <h5>Search Inspiration for project</h5>
+          <div class="bottom flex mt-2">
+            <div class="left mr-2">
+              <i class="pi pi-link"></i>
+              <a class="ml-3" href="www.uistore.org">www.uistore.org</a>
+            </div>
+            <p-divider [layout]="'vertical'"></p-divider>
+            <div class="right">
+              <i class="pi pi-comment"></i>
+              <span class="ml-3">5 comments</span>
+            </div>
+          </div>
+        </div>
+        <div class="progress">
+          <h5 class="mb-3">24% complete</h5>
+          <p-progressBar [value]="50" [showValue]="false"></p-progressBar>
+        </div>
+        <button pButton pRipple label="Reminder" icon="fa-regular fa-clock"></button>
+      </div>
+      <div class="task bg-white p-4 flex flex-wrap justify-content-between">
+        <div class="timer flex align-items-center">
+          <p-button icon="pi pi-play" rounded="true" severity="primary"></p-button>
+          <div class="right ml-3">
+            <h5>Start from</h5>
+            <div class="botom mt-2 muted-text">
+              <i class="pi pi-clock"></i> <span class="ml-2">3.00 am</span>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <h5>Search Inspiration for project</h5>
+          <div class="bottom flex mt-2">
+            <div class="left mr-2">
+              <i class="pi pi-link"></i>
+              <a class="ml-3" href="www.uistore.org">www.uistore.org</a>
+            </div>
+            <p-divider [layout]="'vertical'"></p-divider>
+            <div class="right">
+              <i class="pi pi-comment"></i>
+              <span class="ml-3">5 comments</span>
+            </div>
+          </div>
+        </div>
+        <div class="progress">
+          <h5 class="mb-3">24% complete</h5>
+          <p-progressBar [value]="50" [showValue]="false"></p-progressBar>
+        </div>
+        <button pButton pRipple label="Reminder" icon="fa-regular fa-clock"></button>
+      </div>
+    </div>
+  </div>
+</div>

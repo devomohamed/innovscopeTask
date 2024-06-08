@@ -1,0 +1,56 @@
+// .dashboard{
+//   height: 100hv;
+//   overflow: auto;
+// }
+.card{
+  // width: 274px;
+  background-color:#fff;
+  border-radius:16px;
+  .top{
+    .icon{
+      i{
+        padding: 10px;
+        border-radius: 50px;
+        background-color: #F3F7FD;
+        color: #8D98A9;
+      }
+    }
+    .number{
+      color: #1E1E1E;
+    }
+  }
+}
+.chart{
+  border-radius:16px;
+  .header .taps .tap{
+    &.active,&:hover{
+      position: relative;
+      color: #1EA7FF;
+      &::before{
+        width: 100%;
+        content: '';
+        height: 2px;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        background-color: #1EA7FF;
+      }
+    }
+  }
+}
+
+.tasks .task {
+  border-radius: 16px;
+  ::ng-deep{
+
+    .p-divider.p-divider-vertical{
+      padding: 0;
+    }
+  }
+}
+
+::ng-deep{
+  .p-progressbar{
+    height: 10px;
+  }
+}
