@@ -1,6 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
 // start framework
+
+body{
+    background-color: #F3F4F8;
+    font-family: "DM Sans", sans-serif;
+}
 ul li{
     list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    margin: 0 40px;
+}
+.mt-30{
+    margin-top: 30px !important;
+}
+.mt-19{
+    margin-top: 19px !important;
+}
+.mt-16{
+    margin-top: 16px !important;
+}
+.mt-10{
+    margin-top: 10px !important;
+}
+.muted-text{
+    color: #768396;
 }
 // end framework
